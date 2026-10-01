@@ -12,26 +12,11 @@
   // Format : 'AAAA-MM-JJTHH:MM:SS'
   var EVENT_DATE = '2026-11-13T18:00:00';
 
-  // Lien de billetterie externe (Billetweb, HelloAsso, Weezevent…).
-  // Tous les boutons "Réserver" pointeront vers cette adresse.
-  var TICKET_URL = 'https://www.example.com/billetterie';
-
   // ------------------------------------------------------------------
   // Année du footer
   // ------------------------------------------------------------------
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // ------------------------------------------------------------------
-  // Liens de billetterie
-  // ------------------------------------------------------------------
-  document.querySelectorAll('[data-ticket]').forEach(function (link) {
-    if (TICKET_URL) {
-      link.setAttribute('href', TICKET_URL);
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener');
-    }
-  });
 
   // ------------------------------------------------------------------
   // Menu mobile
